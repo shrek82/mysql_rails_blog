@@ -1,0 +1,61 @@
+﻿1、rake命令：
+1.1、创建数据库
+rake db:create
+1.2、数据迁移
+rake db:migrate
+因为预设是跑在development模式，这个指令会用config/database.yml设定里的development那段所指定的资料库。
+
+
+2、rails命令
+2.1、//脚手架(scaffold)学习------------------------------------
+scaffold可以生成一套保证包含了控制器，模型，视图，迁移结构等资源，例如：
+$ rails g scaffold person name:string bio:text birthday:date
+
+db/migrate/20110517161435_create_people.rb	用来建立people资料库资料表的Migration(你的档案开头名称会有不同的时间)
+app/models/person.rb	person model档案
+test/fixtures/people.yml	用来测试的假文章资料
+app/controllers/people_controller.rb	people controller档案
+app/views/people/index.html.erb	用来显示所有文章的index页面
+app/views/people/edit.html.erb	用来编辑文章的页面
+app/views/people/show.html.erb	用来显示特定一篇文章的页面
+app/views/people/new.html.erb	用来新增文章的页面
+app/views/people/_form.html.erb	用来显示编辑和新增文章的表单局部(Partial)样板
+app/helpers/people_helper.rb	可在文章Views中使用的Helper方法
+test/unit/person_test.rb	people model的单元测试
+test/functional/people_controller_test.rb	people controller的功能测试
+test/unit/helpers/people_helper_test.rb	people helper的单元测试
+config/routes.rb	设定URL路由规则的档案，scaffold再此新增了一行resources :people
+app/assets/stylesheets/scaffold.css.scss	Scaffold鹰架提供的样式档案
+app/assets/stylesheets/people.css.scss	people的CSS样式档案
+app/assets/javascripts/people.js.coffee	people的JavaScript档案
+
+Rails的scaffold脚手架功能会自动产生一组Model、Views跟Controller程式码，完成一个简易的CRUD程式以供展示及学习之用。
+
+虽然鹰架(scaffolding)可以帮助你快速上手，但是可没办法产生出完美符合需求的程式码。因此有经验的Rails程式设计师甚少使用预设的鹰架产生程式码，而是偏好使用Rails的generator来分别产生Model和Controller档案，甚至客制出自己专属的scaffold程式。
+
+scaffold产生出来的程式中，有一项是资料库迁移档(database migration)。Migration的用途是建立和修改资料库资料表。Rails使用rake指令来执行Migrations。Migration的档名中包含了Timestamp (时间戳章)，用来确保它们可以依照建立时间依序执行。
+
+
+2.2、创建控制器(名称为home，index为一项操作，可以是多项操作，用空格隔开)
+rails generate controller home index show.....
+可以简写为
+rails g controller home index show.....
+
+3、控制台 console
+
+4、gem管理工具
+RubyGems是Ruby的 ​​套件管理系统，让你轻易安装及管理Ruby函式库。你可以在RubyGems上找到所有的Ruby开源套件。另外，读者如果想找Ruby或Rails有哪些好用的套件，也可以浏览看看The Ruby Toolbox，这个站依照套件的热门程度排序，非常方便。
+gem -v 告诉你RubyGems 的版本
+gem update --system 升级RubyGems的版本
+gem install gem_name 安装某个套件
+gem list 列出安装的套件
+gem update gem_name 更新最新版本
+gem update 更新所有你安装的Gems
+gem install -v xxx gemname 安装特定版本
+gem uninstall gem_name 反安装
+
+
+//其他笔记-----------------------------------------------------
+如果要自定义首页，须删除默认的public/index.html
+然后再config/routes.rb中取消注释，并设置 root :to=>'home#index'
+"home#index"这一行告诉Rails将root网址对应到home controller的index action。

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410155714) do
+ActiveRecord::Schema.define(:version => 20130412024621) do
 
   create_table "posts", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,21 @@ ActiveRecord::Schema.define(:version => 20130410155714) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "routes", :force => true do |t|
+    t.string   "title"
+    t.string   "short_title"
+    t.string   "tags"
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.string   "img_path"
+    t.string   "banner_path"
+    t.integer  "province_id"
+    t.integer  "city_id"
+    t.integer  "duration"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
