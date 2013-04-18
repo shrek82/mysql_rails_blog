@@ -6,7 +6,7 @@ class RoutesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @routes }
+      format.json { render json : @routes }
     end
   end
 
@@ -17,7 +17,7 @@ class RoutesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @route }
+      format.json { render json : @route }
     end
   end
 
@@ -28,7 +28,7 @@ class RoutesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @route }
+      format.json { render json : @route }
     end
   end
 
@@ -44,11 +44,11 @@ class RoutesController < ApplicationController
 
     respond_to do |format|
       if @route.save
-        format.html { redirect_to @route, notice: 'Route was successfully created.' }
-        format.json { render json: @route, status: :created, location: @route }
+        format.html { redirect_to @route, notice : 'Route was successfully created.' }
+        format.json { render json : @route, status : :created, location : @route }
       else
-        format.html { render action: "new" }
-        format.json { render json: @route.errors, status: :unprocessable_entity }
+        format.html { render action : "new" }
+        format.json { render json : @route.errors, status : :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class RoutesController < ApplicationController
 
     respond_to do |format|
       if @route.update_attributes(params[:route])
-        format.html { redirect_to @route, notice: 'Route was successfully updated.' }
+        format.html { redirect_to @route, notice : 'Route was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @route.errors, status: :unprocessable_entity }
+        format.html { render action : "edit" }
+        format.json { render json : @route.errors, status : :unprocessable_entity }
       end
     end
   end

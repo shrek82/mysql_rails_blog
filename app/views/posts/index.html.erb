@@ -1,48 +1,50 @@
-
-                <div class="g  one-whole  desk-six-tenths">
-                    <h1 class="accessibility">CSS Wizardry &ndash; CSS, OOCSS, front-end architecture, performance and more&hellip;</h1>
-
-                    
-
-                    <section class="posts">
-                        <ul class="block-list">
-<% @posts.each do |post| %>
-                            <li>
-                                <span class="post_time"><%= post.created_at %></span>
-                                <h3 class="post_title"><%= link_to post.title, post %></h3>
-                            </li>
-<% end %>
-                        </ul>
-                    </section>
-
-                    <ol class="nav  pagination">
-                        <li class="pagination_prev">上一页 </li><li class="pagination_next"><a href="/page2">下一页</a>
-                        </li>
-                    </ol>
-
-                </div>
+<div class="g  one-whole  desk-six-tenths">
+  <h1 class="accessibility">CSS Wizardry &ndash; CSS, OOCSS, front-end architecture, performance and more&hellip;</h1>
 
 
-                              <div class="g  one-whole  desk-three-tenths  desk-push_one-tenth">
+  <section class="posts">
+    <ul class="block-list">
+      <% @posts.each do |post| %>
+          <li>
+            <span class="post_time"><%= post.created_at %></span>
 
-                   
-                    <p>赵建刚(@shrek99) 本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。 </p>
+            <h3 class="post_title"><%= link_to post.title, post %></h3>
+          </li>
+      <% end %>
+    </ul>
+  </section>
 
-                    <ul class="block-list">
-                        <li>
-                            <a href="http://inuitcss.com">
-                                <img src="/assets/inuit.css-logo.png" alt="inuit.css" class="logo">
-                            </a>
-                            <a href="http://inuitcss.com">inuit.css</a> is a powerful, scalable, Sass-based, BEM, OOCSS framework.
-                        </li>
-                    </ul>
+  <ol class="nav  pagination">
+    <li class="pagination_prev">上一页</li>
+    <li class="pagination_next"><a href="/page2">下一页</a>
+    </li>
+  </ol>
+
+</div>
+
+
+<div class="g  one-whole  desk-three-tenths  desk-push_one-tenth">
+
+
+  <p>赵建刚(@shrek99)
+    本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。 </p>
+
+  <ul class="block-list">
+    <li>
+      <a href="http://inuitcss.com">
+        <img src="/assets/inuit.css-logo.png" alt="inuit.css" class="logo">
+      </a>
+      <a href="http://inuitcss.com">inuit.css</a> is a powerful, scalable, Sass-based, BEM, OOCSS framework.
+    </li>
+  </ul>
 
 
 
- <%= link_to 'New Post', new_post_path %><br>
- <br>
- <br>
-                </div>
+  <%= link_to 'New Post', new_post_path %>
+  <br>
+  <br>
+  <br>
+</div>
 
 
 

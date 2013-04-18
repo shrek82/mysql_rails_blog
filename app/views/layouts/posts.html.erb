@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" class="page  page_home">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-        <title><%= @title %> - 啄木鸟</title>
-        <link rel="stylesheet" href="/assets/csswizardry.min.css">
-        <link rel="shortcut icon" href="/assets/images/icon.png">
-        <link rel="apple-touch-icon-precomposed" href="/assets/images/icon.png">
-        <meta name="apple-mobile-web-app-title" content="csswizardry">
-    </head>
-    <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <title><%= @title %> - 啄木鸟</title>
+  <link rel="stylesheet" href="/assets/csswizardry.min.css">
+  <link rel="shortcut icon" href="/assets/images/icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/images/icon.png">
+  <meta name="apple-mobile-web-app-title" content="csswizardry">
+</head>
+<body>
 
-        <script>
-            (function() {
-                var bsa = document.createElement('script');
-                bsa.type = 'text/javascript';
-                bsa.async = true;
-                bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa);
-            })();
-        </script>
+<script>
+    (function () {
+        var bsa = document.createElement('script');
+        bsa.type = 'text/javascript';
+        bsa.async = true;
+        bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa);
+    })();
+</script>
 
-        <div class="wrapper">
+<div class="wrapper">
 
-            <header class="page-head">
+  <header class="page-head">
 
-                <a href="/" class="site-logo">
-                    <img src="/assets/icon2.png">
-                </a>
+    <a href="/" class="site-logo">
+      <img src="/assets/icon2.png">
+    </a>
 
-                <ul class="nav  site-nav">
-                    <li class="site-nav_home"><a href="/">Home</a></li><li class="site-nav_about"><a href="/about/">About</a></li><li class="site-nav_speaking"><a href="/speaking/">Speaking</a></li>
-                </ul>
+    <ul class="nav  site-nav">
+      <li class="site-nav_home"><a href="/">Home</a></li>
+      <li class="site-nav_about"><a href="/test/">About</a></li>
+      <li class="site-nav_speaking"><a href="/post/">Speaking</a></li>
+    </ul>
 
-            </header>
+  </header>
 
-            <div class="gw">
-                <%= yield %>
-            </div>
+  <div class="gw">
+    <%= yield %>
+  </div>
 
-        </div>
+</div>
 
-        <footer class="page-foot"><div class="wrapper">
+<footer class="page-foot">
+  <div class="wrapper">
 
-                <p>&copy; 2013 <a href="http://twitter.com/csswizardry">Harry Roberts</a>.
-                    Built with <a href="http://inuitcss.com">inuit.css</a>
-                    and <a href="https://github.com/mojombo/jekyll/">Jekyll</a>.
-                    The source code of this blog is <a href="https://github.com/csswizardry/csswizardry.github.com">hosted on GitHub</a>.<br>
-                    You should <a href="http://feeds.feedburner.com/csswizardrycom">grab the RSS feed</a> and <a href="http://twitter.com/csswizardry">follow me on Twitter</a>.</p>
+    <p>&copy; 2013 <a href="http://twitter.com/csswizardry">Harry Roberts</a>.
+      Built with <a href="http://inuitcss.com">inuit.css</a>
+      and <a href="https://github.com/mojombo/jekyll/">Jekyll</a>.
+      The source code of this blog is
+      <a href="https://github.com/csswizardry/csswizardry.github.com">hosted on GitHub</a>.<br>
+      You should <a href="http://feeds.feedburner.com/csswizardrycom">grab the RSS feed</a> and
+      <a href="http://twitter.com/csswizardry">follow me on Twitter</a>.</p>
 
-            </div></footer>
+  </div>
+</footer>
 
-    </body>
+</body>
 </html>

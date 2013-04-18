@@ -1,4 +1,12 @@
 Mysqlblog::Application.routes.draw do
+
+  resources :comments
+
+  #这个就是通过控制台“rails generate controller Test index”自动添加进来的
+  #越靠上的一行配置拥有越高的优先级
+  #get "test/index"的意思是将test/index的请求调用名为test的Controller中名为index的Action。
+  get "test/index"
+
   resources :routes
 
 
@@ -64,5 +72,7 @@ Mysqlblog::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+
+  #match ':controller/:id' => ':controller#view'
+  match ':controller(/:action(/:id))(.:format)'
 end
