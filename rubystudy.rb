@@ -1,1 +1,0 @@
-#数组添加和循环打印a = []a << 1 << 2<<3<<'ddd'<<"ddddd"#代码块方式1，写在一行{}a.each { |i| puts i }#代码块，需要写多行时do~enda.each do |i|  puts iend#类和方法class Person  def initialize(name)    @name = name  end  def say(word)    puts "#{word}, #{@name}"  endendp1 = Person.new("Bindiry")p1.say("Hello")# 输出Hello, Bindiry
